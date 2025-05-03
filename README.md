@@ -10,7 +10,7 @@
 
 **DOF3TNA v2** is an Android application designed to support **first-year students at the Faculty of Commerce - Alexandria University**. The app allows students to organize their lectures, access educational resources, and stay updated with academic schedules all in one convenient platform.
 
-**دفعتنا الإصدار الثاني** هو تطبيق أندرويد تم تصميمه لدعم **طلاب الفرقة الأولى بكلية التجارة - جامعة الإسكندرية**. يتيح التطبيق للطلاب تنظيم محاضراتهم، الوصول إلى الموارد التعليمية، والبقاء على اطلاع بجداولهم الدراسية في منصة واحدة مريحة.
+
 
 ---
 
@@ -63,7 +63,7 @@ To contribute:
 
 ## 📧 Contact
 
-For any inquiries, please contact [Osama Mabrouk](mailto:osamamabrouk0@gmail.com).
+For any inquiries, please contact [Osama Mabrouk](mailto:osamamabrouk015@gmail.com).
 
 ---
 
