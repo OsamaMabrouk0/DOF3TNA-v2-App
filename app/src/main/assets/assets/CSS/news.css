@@ -1,0 +1,59 @@
+.construction-message {
+    text-align: center;
+    margin-top: 5%;
+    padding: 0 10px;
+}
+
+.construction-image {
+    width: 50%;
+    max-width: 300px;
+    margin-top: 10px;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.construction-message p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+body.dark-mode .construction-message p{
+    color: var(--text-color-dark);
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .construction-message {
+        margin-top: 40%;
+    }
+
+    .construction-image {
+        width: 70%;
+    }
+
+    .construction-message p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .construction-image {
+        width: 90%;
+    }
+
+    .construction-message p {
+        font-size: 0.9rem;
+    }
+}

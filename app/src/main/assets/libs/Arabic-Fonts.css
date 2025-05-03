@@ -1,0 +1,74 @@
+/* Almarai */
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Almarai.woff2) format('woff2');
+}
+
+/* Amiri */
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Amiri.woff2) format('woff2');
+
+}
+
+/* Aref Ruqaa */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Aref-Ruqaa.woff2) format('woff2');
+
+}
+
+/* Cairo */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Cairo.woff2) format('woff2');
+
+}
+
+/* Changa */
+@font-face {
+  font-family: 'Changa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Changa.woff2) format('woff2');
+}
+
+/* Mada */
+@font-face {
+  font-family: 'Mada';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Mada.woff2) format('woff2');
+}
+
+/* Reem Kufi */
+@font-face {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Reem-Kufi.woff2) format('woff2');
+}
+
+/* Tajawal */
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Fonts/Tajawal.woff2) format('woff2');
+}

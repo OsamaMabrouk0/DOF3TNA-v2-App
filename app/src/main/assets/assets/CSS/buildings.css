@@ -1,0 +1,120 @@
+/* *********************************| تصميم الجداول |********************************* */
+.building-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-top-left-radius:var(--border-radius);
+    border-top-right-radius:var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    font-size: 1.2em;
+    direction: rtl;
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .building-table {
+    background-color: var(--secondary-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.building-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.building-table th,
+.building-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .building-table th,
+body.dark-mode .building-table td {
+    border-color: var(--border-color-dark);
+}
+
+.building-table th {
+    background-color: var(--sidebar-bg);
+    color: #ffffff;
+    font-size: var(--font-size-title);
+}
+
+body.dark-mode .building-table th {
+    background-color: var(--primary-color-dark);
+}
+
+.building-table td {
+    font-size: var(--font-size-text);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .building-table td {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* *********************************| العناوين |********************************* */
+.title {
+    text-align: center;
+    box-shadow: var(--shadow);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px 15px 15px;
+    border-radius: var(--border-radius);
+    max-width: 300px;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .title {
+    background-color: var(--sidebar-bg-dark);
+    color: var(--text-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+/* *********************************| الحروف المميزة |********************************* */
+.accent-letter {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+body.dark-mode .accent-letter {
+    color: var(--primary-color-dark);
+}
+
+/* *********************************| التجاوب |********************************* */
+@media (max-width: 768px) {
+    .building-table {
+        font-size: 1em;
+    }
+
+    .building-table th,
+    .building-table td {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .building-table {
+        font-size: 0.9em;
+    }
+
+    .building-table th,
+    .building-table td {
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 1em;
+        padding: 7.5px 10px 10px;
+    }
+}

@@ -1,0 +1,12 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- تعيين لون شريط الإشعارات إلى اللون الأسود -->
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- سمة مخصصة لتطبيقك -->
+    <style name="Theme.DOF3TNA" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- يمكنك إضافة تخصيصات هنا إذا كنت بحاجة إلى تخصيصات أخرى -->
+    </style>
+</resources>

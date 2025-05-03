@@ -1,0 +1,154 @@
+/* *********************************| صفحة الإعدادات |********************************* */
+
+
+.settings-section {
+    background: var(--bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-info i {
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+body.dark-mode .setting-info i {
+    color: var(--primary-color-dark);
+}
+
+body.dark-mode .settings-section,
+body.dark-mode .settings-select {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .settings-section {
+    background-color: var(--icon-bg-color-dark);
+
+}
+
+body.dark-mode .setting-item p,
+body.dark-mode .setting-item label,
+body.dark-mode .setting-item h3 {
+    color: var(--text-color-dark);
+}
+
+/* *********************************| مفتاح التبديل |********************************* */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--primary-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+body.dark-mode input:checked+.slider {
+    background-color: var(--primary-color-dark);
+}
+
+/* *********************************| القائمة المنسدلة |********************************* */
+.settings-select {
+    padding: 2px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    text-align: center;
+}
+
+body.dark-mode .settings-select {
+    border: 1px solid var(--border-color-dark);
+
+}
+
+/* *********************************| زر الحذف |********************************* */
+.danger-zone {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-data-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.delete-data-btn:hover {
+    background-color: #d32f2f;
+}
+
+

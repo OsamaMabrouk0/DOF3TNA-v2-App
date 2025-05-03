@@ -1,0 +1,353 @@
+#loading-screen-video {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.dark-mode #loading-screen-video {
+    background-color: var(--bg-color-dark);
+}
+
+#loading-screen-video.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#video-frame {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+#video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+body.dark-mode #video-frame {
+    background-color: var(--secondary-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+@media (min-width: 768px) {
+    #video-frame {
+        height: 650px;
+        /* زيادة الارتفاع على الشاشات الكبيرة */
+        width: 90%;
+        /* تقليل العرض على الشاشات الكبيرة */
+        margin: auto;
+    }
+
+    #video-frame iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+#video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#video-content p {
+    font-size: var(--font-size-title);
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+}
+
+body.dark-mode #video-content p {
+    color: var(--text-color-dark);
+}
+
+#video-placeholder {
+    width: 60%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease-in-out;
+}
+
+#video-placeholder:hover {
+    transform: scale(1.05);
+}
+
+#progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d1d5db;
+    display: none;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+body.dark-mode #progress-bar {
+    background-color: var(--primary-color-dark);
+}
+
+#videos-dropdown {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body.dark-mode #videos-dropdown {
+    background-color: var(--secondary-color-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+#videos-dropdown:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+body.dark-mode #videos-dropdown:hover {
+    box-shadow: var(--shadow-hover-dark);
+}
+
+@media (min-width: 768px) {
+    #video-content {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+
+    #video-content p {
+        max-width: 50%;
+        text-align: left;
+        font-size: 22px;
+    }
+
+    #video-placeholder {
+        width: 50%;
+    }
+
+    #video-frame p {
+        padding-right: 10%;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    #video-frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #video-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #video-content p {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #video-placeholder {
+        width: 80%;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.vid-select {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+
+@media (min-width: 768px) {
+    .video-message-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: right;
+        gap: 20px;
+
+        /* يمنع العناصر من النزول أسفل بعضها */
+    }
+
+    .video-message-container img {
+        width: 40%;
+        /* تقليل العرض قليلاً لضمان المساحة للنص */
+        max-width: 300px;
+        border-radius: var(--border-radius);
+    }
+
+    .video-message-container p {
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--text-color);
+        max-width: 60%;
+        /* السماح للنص بأخذ المساحة المتبقية */
+        white-space: nowrap;
+margin: 20px;
+
+        /* يجعل النص الطويل يُقص ويظهر (...) */
+    }
+
+    /* دعم الوضع الليلي */
+    body.dark-mode .video-message-container p {
+        color: var(--text-color-dark);
+    }
+}
+
+@media (max-width: 767px) {
+    .video-message-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .video-message-container img {
+        width: 80%;
+        max-width: 300px;
+        border-radius: var(--border-radius);
+        margin-bottom: 15px;
+    }
+
+    .video-message-container p {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    /* دعم الوضع الليلي */
+    body.dark-mode .video-message-container p {
+        color: var(--text-color-dark);
+    }
+}
+
+
+/* تغطية شاشة التحميل للصفحة بالكامل */
+#loading-screen-videos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    /* أعلى مستوى */
+}
+
+body.dark-mode #loading-screen-videos {
+    background-color: var(--bg-color-dark);
+}
+
+
+/* الحاوية التي تحتوي على الدوار والنص */
+.loader-container {
+    text-align: center;
+}
+
+/* الدوار */
+.loader-vid {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid var(--primary-color);
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+body.dark-mode .loader-vid {
+    border-top: 4px solid var(--primary-color-dark);
+}
+
+/* إضافة تأثير دوار آخر */
+.loader-vid::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid var(--primary-color);
+    border-left: 4px solid transparent;
+}
+
+body.dark-mode .loader-vid::after {
+    border-bottom: 4px solid var(--primary-color-dark);
+}
+
+/* النص */
+.loading-text-vid {
+    margin-top: 10px;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    /* أو أي خط تختاره */
+}
+
+body.dark-mode .loading-text-vid {
+    color: #FFF;
+}
+
+/* تأثير الدوران */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

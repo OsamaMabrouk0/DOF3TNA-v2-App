@@ -1,0 +1,92 @@
+/* *********************************| إعدادات الجدول |********************************* */
+
+.table {
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .table {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+body.dark-mode .table th {
+    background-color: var(--primary-color-dark);
+}
+
+body.dark-mode .table td {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .dark-mode-row {
+    background-color: var(--secondary-color-dark);
+}
+
+/* *********************************| إعدادات النص في البطاقات |********************************* */
+
+.card-body h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .col-12 {
+        margin-bottom: 20px; /* إضافة المسافة بين البطاقات في الهواتف */
+    }
+}
+
+
+/* *********************************| الرسم البياني |********************************* */
+
+
+.chart-card {
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    margin: 10px;
+
+}
+
+.chart-card .card-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 15px;
+}
+
+.chart-card canvas {
+    width: 100%;
+    height: auto;
+}
+
+body.dark-mode .chart-card {
+    background-color: var(--bg-color-dark);
+    box-shadow: var(--shadow-dark);
+    border-radius: 15px;
+    
+}
+
+body.dark-mode .chart-card .card-body {
+    background-color: var(--icon-bg-color-dark);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+}
+

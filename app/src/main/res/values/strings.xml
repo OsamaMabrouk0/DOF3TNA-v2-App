@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">دفعتنا</string>
+    <string name="error_loading">حدث خطأ أثناء التحميل. يرجى المحاولة لاحقًا.</string>
+</resources>
+

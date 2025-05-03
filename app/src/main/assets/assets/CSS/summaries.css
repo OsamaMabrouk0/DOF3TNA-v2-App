@@ -1,0 +1,315 @@
+        /* تحسين تصميم القوائم */
+        .summaries-container {
+            max-width: 900px;
+            margin: auto;
+            border-radius: 10px;
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .summaries {
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .summaries-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .summaries-header:hover {
+            background: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+        }
+
+        .summaries-header.open {
+            background: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        body.dark-mode .summaries-header {
+            background: var(--secondary-color-dark);
+            color: var(--text-color-dark);
+            box-shadow: var(--shadow-dark);
+        }
+
+        body.dark-mode .summaries-header:hover {
+            background: var(--primary-color-dark);
+            color: white;
+        }
+
+        body.dark-mode .summaries-header.open {
+            background: var(--primary-color-dark);
+            color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .summaries-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 20px;
+            background: var(--secondary-color);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        body.dark-mode .summaries-content {
+            background: var(--secondary-color-dark);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .summaries-content.open {
+            max-height: 1500000px;
+            padding: 10px 20px;
+        }
+
+        .summaries-files {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease;
+            font-size: 1rem;
+        }
+
+        body.dark-mode .summaries-files {
+            border-bottom: 1px solid var(--border-color-dark);
+        }
+
+        .summaries-files:hover {
+            background: var(--icon-bg-color);
+        }
+
+        body.dark-mode .summaries-files:hover {
+            background: var(--icon-bg-color-dark);
+        }
+
+        .file-name {
+            flex-grow: 1;
+            word-break: break-word;
+            color: var(--text-color);
+        }
+
+        body.dark-mode .file-name {
+            color: var(--text-color-dark);
+        }
+
+        .download-icon a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        body.dark-mode .download-icon a {
+            color: var(--primary-color-dark);
+        }
+
+
+        .arrow-icon i {
+            transition: transform 0.3s ease;
+        }
+
+        .summaries-header.open .arrow-icon i {
+            transform: rotate(180deg);
+        }
+
+        /* إضافة مسافة أسفل العنصر الأخير */
+        .summaries-content .summaries-files:last-child {
+            margin-bottom: 20px; /* تعديل حسب الحاجة */
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .summaries-header {
+                font-size: 1rem;
+            }
+            .summaries-files {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            .download-icon a {
+                font-size: 1.2rem;
+            }
+        }
+
+        
+        /* تغطية شاشة التحميل للصفحة بالكامل */
+        #loading-screen-summaries {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            /* أعلى مستوى */
+        }
+        body.dark-mode #loading-screen-summaries {
+            background-color: var(--bg-color-dark);
+        }
+
+
+        /* الحاوية التي تحتوي على الدوار والنص */
+        .loader-container {
+            text-align: center;
+        }
+
+        /* الدوار */
+        .loader-summ {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            border-top: 4px solid var(--primary-color);
+            border-right: 4px solid transparent;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        body.dark-mode .loader-summ{
+            border-top: 4px solid var(--primary-color-dark);
+        }
+
+        /* إضافة تأثير دوار آخر */
+        .loader-summ::after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border-bottom: 4px solid var(--primary-color);
+            border-left: 4px solid transparent;
+        }
+
+        body.dark-mode .loader-summ::after {
+            border-bottom: 4px solid var(--primary-color-dark);
+        }
+
+        /* النص */
+        .loading-text-summ {
+            margin-top: 10px;
+            color: #000;
+            font-size: 16px;
+            /* أو أي خط تختاره */
+        }
+
+        body.dark-mode .loading-text-summ {
+            color: #FFF;
+        }
+
+        /* تأثير الدوران */
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* *********************************| صفحة عدم توفر انترنت للملخصات  |********************************* */
+        .offline-container-summaries {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .offline-message-summaries {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            background-color: #ffefeb;
+            border: 2px solid #ffa8a3;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .offline-message-summaries i {
+            font-size: 50px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .offline-message-summaries span {
+            font-size: 20px;
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        /* Offline Image */
+        .offline-image-summaries {
+            flex: 1;
+            max-width: 50%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+
+        @media (max-width: 1024px) {
+            .offline-container-summaries {
+                flex-direction: row;
+            }
+
+            .offline-message-summaries {
+                padding: 25px;
+            }
+
+            .offline-message-summaries i {
+                font-size: 45px;
+            }
+
+            .offline-message-summaries span {
+                font-size: 18px;
+            }
+
+            .offline-image-summaries {
+                max-width: 45%;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .offline-container-summaries {
+                flex-direction: column;
+            }
+
+            .offline-message-summaries {
+                padding: 20px;
+            }
+
+            .offline-message-summaries span {
+                font-size: 16px;
+            }
+
+            .offline-image-summaries {
+                max-width: 80%;
+                margin-top: 20px;
+            }
+        }
