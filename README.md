@@ -44,20 +44,6 @@ Once downloaded, simply open the file to install the app on your Android device.
 
 ---
 
-## 📝 Contributing
-
-Feel free to fork the repository, contribute, and open pull requests. Contributions are always welcome!
-
-To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Make your changes
-4. Commit your changes (`git commit -am 'Add new feature'`)
-5. Push to the branch (`git push origin feature-branch`)
-6. Open a pull request
-
----
 
 ## 📧 Contact
 
@@ -117,20 +103,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📝 المساهمة
-
-يمكنك استنساخ المستودع، والمساهمة، وفتح طلبات السحب. المساهمات دائمًا مرحب بها!
-
-للمساهمة:
-
-1. استنساخ المستودع
-2. إنشاء فرع جديد (`git checkout -b feature-branch`)
-3. إجراء التعديلات
-4. تثبيت التعديلات (`git commit -am 'Add new feature'`)
-5. دفع التعديلات إلى الفرع (`git push origin feature-branch`)
-6. فتح طلب سحب
-
----
 
 ## 📧 الاتصال
 
